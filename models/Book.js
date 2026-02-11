@@ -15,6 +15,11 @@ const bookSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
+    borrowedBy: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      default: null,
+    },
   },
   {
     timestamps: true,
